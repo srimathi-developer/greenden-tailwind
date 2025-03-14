@@ -12,27 +12,45 @@
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl ">Greeden</h1>
 
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
           
 
     <ul class="flex gap-5 text-gray-600 hidden md:flex">
         <li>
-            <a class="hover:underline" href="#">Home</a>
+            <a class="hover:underline" href="index.html">Home</a>
         </li>
         
         <li>
-            <a class="hover:underline" href="#">products</a>
+            <a class="hover:underline" href="product.html">products</a>
         </li>
         <li>
-            <a class="hover:underline" href="#">contact</a>
+            <a class="hover:underline" href="contact.html">contact</a>
         </li>
     </ul>
     </nav>
+    <!--side navbar-->
+    <section id =sidenav class="bg-green-100 fixed z-20 top-0 transition-all duration-1000" style="width: 50%;height: 100vh ;right: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">x</p>
+        </div>
+
+        <ul class="flex flex-col gap-5 items-center text-gray-600">
+            <li>
+                <a class="hover:underline" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="product.html">products</a>
+            </li>
+            <li>
+                <a class="hover:underline" href="contact.html">contact</a>
+            </li>
+        </ul>
+    </section>
     <section class="p-4 text-center">
         <h1 class="text-3xl font-bold mt-5">Our products</h1>
-        <input type="text" class=" border border-black p-2 m-3" style="width: 80%;"
+        <input id="search" type="text" class=" border border-black p-2 m-3" style="width: 80%;"
         placeholder="search for a products">
     
     </section>
@@ -41,7 +59,7 @@
 
         <h1 class="font-bold mt-5 text-3xl "></h1>
         
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div id="productcontainer" class="grid grid-cols-2 md:grid-cols-4 gap-5">
                 <div>
                     <img src="./images/bestseller_1.jpg "class="inline hover:shadow-xl transform hover:-translate-y-2"alt="">
                     <h1>Rose plant</h1>
@@ -91,3 +109,6 @@
                 </div>
                   
             </div>
+            <script src="product.js"></script>
+        </body>
+ </html>       
